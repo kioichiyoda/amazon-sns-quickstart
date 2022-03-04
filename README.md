@@ -4,7 +4,7 @@ This example showcases how to use the AWS SNS client with Quarkus. As a prerequi
 
 # AWS SNS local instance
 
-Just run it as follows in order to start SNS locally:
+ Just run it as follows in order to start SNS locally:
 `docker run --rm --name local-sns -p 8009:4575 -e SERVICES=sns -e START_WEB=0 -d localstack/localstack:0.11.1`
 SNS listens on `localhost:8009` for REST endpoints.
 
@@ -87,7 +87,7 @@ And observe the logs to see that endpoint is unsubscribed and will stop receivin
 You can compile the application into a native binary using:
 `./mvnw clean install -Pnative`
 and run with:
-`./target/amazon-sns-quickstart-1.0.0-SNAPSHOT-runner`
+`./target/amazon-sns-quickstart-1.0.0-SNAPSHOT-runner` 
 
 # Running native in container
 
@@ -114,3 +114,4 @@ Subscribe an endpoint
 
 Publish a message
 `curl -XPOST -H'Content-type: application/json' http://localhost:8080/sync/cannon/shoot -d'{"flavor": "Charm", "spin": "1/2"}'`
+
